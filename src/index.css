@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  /* Default = dark */
+  --color-wih-900: #181818;
+  --color-wih-800: #212121;
+  --color-wih-700: #353535;
+  --color-wih-600: #424242;
+  --color-wih-50: #ececec;
+
+  --font-sans: "InterVariable", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+[data-theme="light"] {
+  --color-wih-900: #ffffff;
+  --color-wih-800: #f5f5f5;
+  --color-wih-700: #dcdcdc;
+  --color-wih-600: #bfbfbf;
+  --color-wih-50: #181818;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
