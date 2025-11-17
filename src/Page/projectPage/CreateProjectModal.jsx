@@ -110,7 +110,7 @@ function CreateProjectModal({
 
     try {
       const response = await fetch(
-        "http://localhost:8050/project/create-project",
+        "https://proj.zonion.fun/project/create-project",
         {
           method: "POST",
           headers: {
