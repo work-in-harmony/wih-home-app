@@ -8,7 +8,7 @@ export const TaskComments = ({ taskId, userEmail }) => {
   const [client, setClient] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:8050/api/comments/${taskId}`)
+    fetch(`https://proj.zonion.fun/api/comments/${taskId}`)
       .then((res) => res.json())
       .then((data) => setComments(data));
   }, [taskId]);
@@ -16,7 +16,7 @@ export const TaskComments = ({ taskId, userEmail }) => {
   useEffect(() => {
     // Create new STOMP client
     const stompClient = new Client({
-      webSocketFactory: () => new SockJS("http://localhost:8050/ws"),
+      webSocketFactory: () => new SockJS("https://proj.zonion.fun/ws"),
       reconnectDelay: 5000, // auto reconnect every 5s
       onConnect: () => {
         console.log("✅ Connected to WebSocket");

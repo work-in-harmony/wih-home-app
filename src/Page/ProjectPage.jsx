@@ -125,7 +125,7 @@ function EditProjectModal({
 
     try {
       const response = await fetch(
-        `http://localhost:8050/project/update/${project.projectId}`,
+        `https://proj.zonion.fun/project/update/${project.projectId}`,
         {
           method: "PUT",
           headers: {
@@ -389,7 +389,7 @@ function ProjectPage() {
     setLoadingProjects(true);
     try {
       const response = await fetch(
-        `http://localhost:8050/project/list/${currentOrgId}`
+        `https://proj.zonion.fun/project/list/${currentOrgId}`
       );
       if (response.ok) {
         const data = await response.json();

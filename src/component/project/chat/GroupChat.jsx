@@ -25,7 +25,7 @@ function GroupChat({ projectId, currentUserEmail, currentUserRole, projectName }
     const fetchChatHistory = async () => {
       try {
         const response = await fetch(
-          `http://localhost:8050/messages/${projectId}`
+          `https://proj.zonion.fun/messages/${projectId}`
         );
         if (response.ok) {
           const history = await response.json();
@@ -42,7 +42,7 @@ function GroupChat({ projectId, currentUserEmail, currentUserRole, projectName }
   }, [projectId]);
 
   useEffect(() => {
-    const socket = new SockJS("http://localhost:8050/ws");
+    const socket = new SockJS("https://proj.zonion.fun/ws");
     const stompClient = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000,

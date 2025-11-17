@@ -38,7 +38,7 @@ const TaskDetailsSidebar = ({
   const handleSave = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8050/tasks/update/${task.id}`,
+        `https://proj.zonion.fun/tasks/update/${task.id}`,
         {
           method: "PUT",
           headers: {
@@ -77,7 +77,7 @@ const TaskDetailsSidebar = ({
 
     try {
       const response = await fetch(
-        "http://localhost:8050/tasks/generate-plan",
+        "https://proj.zonion.fun/tasks/generate-plan",
         {
           method: "POST",
           headers: {
@@ -110,7 +110,7 @@ const TaskDetailsSidebar = ({
         setIsMembersLoading(true);
         setMembersError(null);
         const response = await fetch(
-          "http://localhost:8050/project/list/members",
+          "https://proj.zonion.fun/project/list/members",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -390,7 +390,7 @@ const TaskDetailsSidebar = ({
                       onChange={async () => {
                         try {
                           const response = await fetch(
-                            `http://localhost:8050/tasks/${task.id}/subtask/${index}`,
+                            `https://proj.zonion.fun/tasks/${task.id}/subtask/${index}`,
                             {
                               method: "POST",
                               headers: { "Content-Type": "application/json" },

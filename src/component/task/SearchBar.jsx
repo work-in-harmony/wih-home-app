@@ -20,7 +20,7 @@ export default function SearchBar({
     searchTimeoutRef.current = setTimeout(async () => {
       try {
         const res = await fetch(
-          `http://localhost:8050/tasks/search?keyword=${searchKeyword}&projectId=${projectId}`
+          `https://proj.zonion.fun/tasks/search?keyword=${searchKeyword}&projectId=${projectId}`
         );
         const data = await res.json();
         setSearchResults(data);

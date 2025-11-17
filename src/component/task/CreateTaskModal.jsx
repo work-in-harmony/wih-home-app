@@ -50,7 +50,7 @@ function CreateTaskModal({ isOpen, onClose, sectionId, projectId, onTaskCreated 
     };
 
     try {
-      const response = await fetch("http://localhost:8050/tasks/create", {
+      const response = await fetch("https://proj.zonion.fun/tasks/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(taskData),
