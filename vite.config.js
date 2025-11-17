@@ -14,7 +14,7 @@ export default defineConfig({
       filename: "HomeApp.js",
       exposes: ExportedModules,
       remotes: {
-        HostApp: "http://localhost:5173/assets/HostApp.js",
+        HostApp: "https://wih-host-app.vercel.app/assets/HostApp.js",
       },
       shared: {
         react: { singleton: true, eager: true },
