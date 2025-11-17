@@ -4,13 +4,13 @@ const withTrailingSlash = (s) => (s.endsWith("/") ? s.slice(0, -1) : s);
 
 // Base URLs (overridable via Vite env variables)
 const AUTH_BASE = withTrailingSlash(
-  import.meta.env.VITE_AUTH_BASE_URL || "http://localhost:8010"
+  "https://api.zonion.fun/auth"
 );
 const ORG_BASE = withTrailingSlash(
-  import.meta.env.VITE_ORG_BASE_URL || "http://localhost:8040"
+  "https://org.zonion.fun"
 );
 const PROJECT_BASE = withTrailingSlash(
-  import.meta.env.VITE_PROJECT_BASE_URL || "http://localhost:8050"
+  "https://proj.zonion.fun"
 );
 
 // Helper to join base + path safely
