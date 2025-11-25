@@ -256,7 +256,7 @@ function AdminDashboard() {
     try {
       const params = new URLSearchParams({ startDate, endDate, groupBy });
       const res = await fetch(
-        `http://localhost:8010/admin/dashboard/sales-graph?${params.toString()}`,
+        `https://api.zonion.fun/auth/admin/dashboard/sales-graph?${params.toString()}`,
         {
           method: "GET",
           credentials: "include",
