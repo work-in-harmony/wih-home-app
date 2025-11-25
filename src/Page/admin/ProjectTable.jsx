@@ -5,7 +5,7 @@ export default function ProjectsTable() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:8010/admin/dashboard/projects", 
+    fetch("https://api.zonion.fun/auth/admin/dashboard/projects", 
       {
         method : "GET",
         credentials : "include"

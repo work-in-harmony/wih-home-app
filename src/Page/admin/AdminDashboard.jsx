@@ -368,7 +368,7 @@ function AdminDashboard() {
 
                 <button
                   onClick={() => window.open(
-                    `http://localhost:8010/admin/dashboard/sales-graph/excel?startDate=${startDate}&endDate=${endDate}&groupBy=${groupBy}`,
+                    `https://api.zonion.fun/auth/admin/dashboard/sales-graph/excel?startDate=${startDate}&endDate=${endDate}&groupBy=${groupBy}`,
                     "_blank"
                   )}
                   className="rounded-md bg-emerald-600 px-4 py-2 text-sm font-semibold text-wih-50 hover:bg-emerald-500"
@@ -378,7 +378,7 @@ function AdminDashboard() {
 
                 <button
                   onClick={() => window.open(
-                    `http://localhost:8010/admin/dashboard/sales-graph/pdf?startDate=${startDate}&endDate=${endDate}&groupBy=${groupBy}`,
+                    `https://api.zonion.fun/auth/admin/dashboard/sales-graph/pdf?startDate=${startDate}&endDate=${endDate}&groupBy=${groupBy}`,
                     "_blank"
                   )}
                   className="rounded-md bg-red-600 px-4 py-2 text-sm font-semibold text-wih-50 hover:bg-red-500"

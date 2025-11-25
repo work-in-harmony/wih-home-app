@@ -9,7 +9,7 @@ export default function UsersTable() {
   const fetchUsers = async (pageNum = 0) => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:8010/admin/dashboard/users?page=${pageNum}&size=10`, {
+      const res = await fetch(`https://api.zonion.fun/auth/admin/dashboard/users?page=${pageNum}&size=10`, {
         credentials: "include",
       });
       const data = await res.json();
@@ -25,7 +25,7 @@ export default function UsersTable() {
 
   const toggleBlock = async (userId) => {
     try {
-      await fetch(`http://localhost:8010/admin/dashboard/users/${userId}/toggle-block`, {
+      await fetch(`https://api.zonion.fun/auth/admin/dashboard/users/${userId}/toggle-block`, {
         method: "PUT",
         credentials: "include",
       });
